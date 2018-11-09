@@ -1,0 +1,96 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap : 10px;
+    max-width: 95%;
+    height: 100%;
+    margin: 3% auto;
+}
+
+.grid-container > div {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    height: 20vh;
+}
+
+.full-row {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.section {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+
+.third-article {
+    display: grid;
+}
+
+
+/* Responsive design */
+
+/* Laptop */
+
+@media all and (max-width: 1024px) { 
+    .grid-container > div {
+        background-color: green;
+        }
+}
+
+/* Tablet */
+
+@media all and (max-width: 768px) { 
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  
+        }
+
+    .grid-container > div {
+        background-color: blue;
+        }
+
+    .full-row {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .section {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .third-article {
+        display: none;
+    }
+}
+
+/* Cellphone */
+
+@media all and (max-width: 480px) { 
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;  
+        }
+
+    .grid-container > div {
+        background-color: red;
+        }
+
+    .full-row {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .section {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+}
+
